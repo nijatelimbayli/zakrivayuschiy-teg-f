@@ -1,0 +1,10 @@
+{
+  "stylelint.validate": ["css", "scss"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "always"
+  },
+  "prettier.documentSelectors": ["**/*.svg"],
+  "[svg]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

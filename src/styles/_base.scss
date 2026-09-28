@@ -9,8 +9,24 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+@use 'variables' as *;
+
+body {
+  font-family: $font-family-main;
+  font-variation-settings: 'wght' $font-weight-text;
+  color: $dark-color;
+  background-color: $light-color;
+  background-image: $gradient;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
 
 .page {
   min-inline-size: 320px;
+  min-block-size: 100vb;
   min-block-size: 100dvb;
 }

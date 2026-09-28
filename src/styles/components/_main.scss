@@ -1,0 +1,13 @@
+@use 'variables' as *;
+
+.main {
+  max-inline-size: $content-width;
+  margin: 100px auto;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-m;
+  align-items: center;
+}

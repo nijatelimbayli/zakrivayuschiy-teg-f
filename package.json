@@ -5,7 +5,17 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "clear": "gulp clear",
+    "favicons": "gulp favicons",
+    "html": "gulp html",
+    "styles": "gulp styles",
+    "sprite": "gulp sprite",
+    "scripts": "gulp scripts",
+    "images": "gulp images",
+    "fonts": "gulp fonts",
+    "lint": "stylelint \"src/styles/**/*.scss\"",
+    "lint:fix": "stylelint \"src/styles/**/*.scss\" --fix"
   },
   "repository": {
     "type": "git",
@@ -24,20 +34,27 @@
     "del": "^8.0.1",
     "gulp": "^5.0.1",
     "gulp-autoprefixer": "^10.0.0",
-    "gulp-avif": "^1.1.1",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-file-include": "^2.3.0",
-    "gulp-imagemin": "^9.2.0",
     "gulp-newer": "^1.4.0",
     "gulp-rename": "^2.1.0",
     "gulp-sass": "^6.0.1",
     "gulp-svgmin": "^4.1.0",
     "gulp-svgstore": "^9.0.0",
     "gulp-terser": "^2.1.0",
-    "gulp-webp": "^5.1.0",
+    "gulp-ttf2woff": "^2.0.0",
+    "gulp-ttf2woff2": "^5.0.0",
     "prettier": "^3.9.8",
     "sass": "^1.104.1",
-    "stylelint": "^17.15.0"
-  }
+    "sharp": "^0.35.4",
+    "stylelint": "^17.15.0",
+    "stylelint-config-recess-order": "^7.8.0",
+    "stylelint-config-standard-scss": "^17.0.0"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 version",
+    "not dead"
+  ]
 }

@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   margin: 0;
 }
@@ -22,8 +26,8 @@ p,
 ul,
 ol,
 li {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 a {
@@ -32,9 +36,9 @@ a {
 
 button,
 input {
-  color: currentColor;
   font-family: inherit;
   font-size: inherit;
+  color: currentcolor;
 }
 
 ul,
@@ -42,12 +46,19 @@ ol {
   list-style: none;
 }
 
+img {
+  width: 100%;
+}
+
+svg {
+  flex-shrink: 0;
+}
+
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
   block-size: 1px;
   overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
   white-space: nowrap;
+  clip-path: inset(50%);
 }

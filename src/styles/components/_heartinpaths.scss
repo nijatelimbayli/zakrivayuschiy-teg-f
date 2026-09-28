@@ -1,0 +1,74 @@
+@use 'variables' as *;
+
+.sparks {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.contour {
+  transition: fill 0.1s linear;
+}
+
+.core {
+  transition: fill 0.3s linear 0.03s;
+}
+
+.main-body {
+  transition: fill 0.3s linear;
+}
+
+.like-icon {
+  transform-origin: center;
+}
+
+.like-icon:hover .core,
+.like-icon:active .core {
+  transition: fill 0.3s linear 0s;
+}
+
+.like-icon:hover .main-body,
+.line-icon:active .main-body {
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon:hover .core,
+.like-icon:hover .main-body {
+  fill: $dark-color;
+}
+
+.like-icon:active .core,
+.like-icon:active .main-body {
+  fill: $red-color;
+}
+
+.like-icon:active .contour {
+  transition: fill 0.3s linear 0.06s;
+}
+
+.like-icon.is-liked .core {
+  fill: $red-color;
+  transition: fill 0.3s linear 0s;
+}
+
+.like-icon.is-liked .main-body {
+  fill: $red-color;
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  fill: $red-color;
+  transition: fill 0.3s linear 0.06s;
+}
+
+.heart {
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.is-liked .heart {
+  animation: heart-scale 0.3s ease-in 0.1s 1;
+}
+
+.is-liked .sparks {
+  animation: sparks-flash 0.3s ease-in 0.3s 1;
+}

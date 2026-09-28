@@ -1,0 +1,32 @@
+/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  --animation-fill-color: #f00;
+  --contour-color: #000;
+}
+
+$font-family-main: 'Inter', sans-serif;
+$font-family-accent: 'PressStart2P', monospace;
+$font-xs: 14px;
+$font-s: 18px;
+$font-weight-text: 400;
+$font-weight-title: 785;
+$light-color: #fff;
+$dark-color: #000;
+$red-color: #f00;
+$stroke-color: #fff;
+$min-inline-size: 320px;
+$min-block-size: 100dvb;
+$content-width: clamp(375px, 282.14px + 29.018vw, 700px);
+$gradient:
+  repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
+  repeating-linear-gradient(180deg, #d3d3d3 0 2px, transparent 2px 4px),
+  linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
+$border: 2px solid $dark-color;
+$border-block: 2px solid $dark-color;
+$gap-s: 20px;
+$gap-m: 51px;
+$gap-content: 25px;
+$padding-content: 25px 26px;
+$gap-button: 7px;
+$padding-button: 10px 36px;

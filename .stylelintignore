@@ -1,0 +1,5 @@
+**/*.min.css
+app/
+node_modules/
+.idea/
+.vscode/

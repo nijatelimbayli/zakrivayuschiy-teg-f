@@ -1,0 +1,24 @@
+@use 'variables' as *;
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-s;
+  align-items: center;
+  max-inline-size: $content-width;
+  padding-block: clamp(122px, calc(119.183px + 0.751vw), 130px);
+  margin: 100px auto 0;
+  font-family: $font-family-accent;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $light-color;
+  border: $border;
+
+  &__title {
+    font-size: clamp(49px, calc(43.366px + 1.502vw), 65px);
+  }
+
+  &__subtitle {
+    font-size: clamp(14px, calc(10.831px + 0.845vw), 23px);
+  }
+}

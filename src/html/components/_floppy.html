@@ -1,0 +1,26 @@
+<button onclick="window['dialog'].showModal()" class="dialog__button-show">
+  <svg
+    width="21"
+    height="21"
+    viewBox="0 0 39 39"
+    aria-hidden="true"
+    class="dialog__button-show-icon"
+  >
+    <use href="svg/sprite.svg#floppy"></use>
+  </svg>
+  <span class="button__text">Сохранить на память</span>
+</button>
+
+<dialog id="dialog" class="dialog">
+  <div class="dialog__wrapper">
+    <div class="dialog__content">
+      <svg width="39" height="39" viewBox="0 0 39 39" aria-hidden="true">
+        <use href="svg/sprite.svg#floppy"></use>
+      </svg>
+      <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
+    </div>
+    <button onclick="window['dialog'].close()" class="dialog__button" autofocus>
+      <span class="button__text">Ok</span>
+    </button>
+  </div>
+</dialog>

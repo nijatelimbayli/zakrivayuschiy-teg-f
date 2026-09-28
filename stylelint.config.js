@@ -1,12 +1,12 @@
 /** @type {import('stylelint').Config} */
 export default {
-  // Extend standard baseline rules recommended for general CSS
-  extends: ['stylelint-config-standard'],
+  extends: ['stylelint-config-standard-scss', 'stylelint-config-recess-order'],
 
-  // Custom tweaks or overrides for your specific project
   rules: {
-    indentation: 2,
+    'selector-class-pattern': null,
+    'no-empty-source': [true, { severity: 'warning' }],
     'color-hex-length': 'short',
+    'color-named': 'never',
     'block-no-empty': true,
   },
 };

@@ -1,0 +1,161 @@
+@use 'variables' as *;
+
+.card {
+  background-color: $light-color;
+  border: $border;
+
+  &__title {
+    padding: 4px 10px;
+    font-size: $font-s;
+    font-variation-settings: 'wght' $font-weight-title;
+  }
+
+  &__image-wrapper {
+    position: relative;
+    border-block: $border-block;
+  }
+
+  &__label {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-family: $font-family-accent;
+    font-size: $font-xs;
+    text-transform: uppercase;
+    text-shadow:
+      -1px -1px 0 $stroke-color,
+      1px -1px 0 $stroke-color,
+      -1px 1px 0 $stroke-color,
+      1px 1px 0 $stroke-color;
+    mix-blend-mode: hard-light;
+    opacity: 0.5;
+
+    @supports (-webkit-text-stroke: 1px $stroke-color) {
+      -webkit-text-stroke: 1px $stroke-color;
+      text-shadow: none;
+    }
+  }
+
+  &__image {
+    display: block;
+    inline-size: 100%;
+    block-size: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-content;
+    padding: $padding-content;
+  }
+
+  &__text {
+    font-size: $font-s;
+    font-variation-settings: 'wght' $font-weight-text;
+    line-height: 21px;
+    letter-spacing: -0.1%;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: $gap-button;
+    align-items: center;
+    align-self: flex-end;
+  }
+
+  &__icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: $light-color;
+    cursor: pointer;
+    outline: 2px solid transparent;
+    background-color: transparent;
+    border: none;
+    transition: outline 0.3s ease;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $dark-color;
+    }
+  }
+
+  &__like-button {
+    position: relative;
+    z-index: 0;
+    padding: $padding-button;
+    overflow: hidden;
+    font-family: $font-family-accent;
+    font-size: $font-xs;
+    cursor: pointer;
+    background-color: $light-color;
+    border: $border;
+    isolation: isolate;
+    transition: color 0.5s ease-in-out;
+    transition: box-shadow 0.3s ease;
+
+    &::before {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      content: '';
+      background-color: $dark-color;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 2px 2px 0 $dark-color;
+    }
+  }
+}
+
+.button__text {
+  position: relative;
+  color: $light-color;
+  mix-blend-mode: difference;
+}
+
+.saturate {
+  filter: saturate(0.2);
+}
+
+.brightness {
+  filter: brightness(1.5);
+}
+
+.hue-rotate {
+  filter: hue-rotate(25deg);
+}
+
+.invert {
+  filter: invert(0.8);
+}
+
+.sepia {
+  filter: sepia(1);
+}
+
+.blur {
+  filter: blur(10px);
+}
+
+.hue-rotate-95 {
+  filter: sepia(0.6) saturate(2) hue-rotate(-30deg) brightness(0.9);
+}
