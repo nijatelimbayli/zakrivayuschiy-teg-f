@@ -1,8 +1,8 @@
 @use 'variables' as *;
 
 .card {
-  background-color: $light-color;
-  border: $border;
+  background-color: $color-card;
+  border: 2px solid $color-border;
 
   &__title {
     padding: 4px 10px;
@@ -12,7 +12,7 @@
 
   &__image-wrapper {
     position: relative;
-    border-block: $border-block;
+    border-block: 2px solid $color-border;
   }
 
   &__label {
@@ -23,15 +23,15 @@
     font-size: $font-xs;
     text-transform: uppercase;
     text-shadow:
-      -1px -1px 0 $stroke-color,
-      1px -1px 0 $stroke-color,
-      -1px 1px 0 $stroke-color,
-      1px 1px 0 $stroke-color;
+      -1px -1px 0 $color-stroke,
+      1px -1px 0 $color-stroke,
+      -1px 1px 0 $color-stroke,
+      1px 1px 0 $color-stroke;
     mix-blend-mode: hard-light;
     opacity: 0.5;
 
-    @supports (-webkit-text-stroke: 1px $stroke-color) {
-      -webkit-text-stroke: 1px $stroke-color;
+    @supports (-webkit-text-stroke: 1px $color-stroke) {
+      -webkit-text-stroke: 1px $color-stroke;
       text-shadow: none;
     }
   }
@@ -70,7 +70,7 @@
     align-items: center;
     justify-content: center;
     padding: 0;
-    color: $light-color;
+    color: $color-foreground;
     cursor: pointer;
     outline: 2px solid transparent;
     background-color: transparent;
@@ -82,53 +82,19 @@
     }
 
     &:focus-visible {
-      outline: 2px solid $dark-color;
+      outline: 2px solid $color-outline;
     }
   }
 
   &__like-button {
-    position: relative;
-    z-index: 0;
-    padding: $padding-button;
-    overflow: hidden;
-    font-family: $font-family-accent;
-    font-size: $font-xs;
-    cursor: pointer;
-    background-color: $light-color;
-    border: $border;
-    isolation: isolate;
-    transition: color 0.5s ease-in-out;
-    transition: box-shadow 0.3s ease;
-
-    &::before {
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      content: '';
-      background-color: $dark-color;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.5s ease-in-out;
-    }
-
-    &:hover::before {
-      transform: scaleX(1);
-    }
-
-    &:focus {
-      outline: none;
-    }
-
-    &:focus-visible {
-      outline: none;
-      box-shadow: 2px 2px 0 $dark-color;
-    }
+    width: 118px;
+    height: 38px;
   }
 }
 
 .button__text {
   position: relative;
-  color: $light-color;
+  color: $color-primary;
   mix-blend-mode: difference;
 }
 

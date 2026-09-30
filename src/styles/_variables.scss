@@ -7,14 +7,44 @@
 
 $font-family-main: 'Inter', sans-serif;
 $font-family-accent: 'PressStart2P', monospace;
+
+/* Colors start */
+
+$background: #fff;
+$foreground: #000;
+$card: #fff;
+$dialog: #fff;
+$dialog-foreground: #000;
+$primary: #fff;
+$secondary: #000;
+$border: #000;
+$outline: #000;
+$shadow: #000;
+$backdrop: #000;
+$stroke: #fff;
+$like: #f00;
+
+/* Colors end */
+
+/* Variables start */
+
+$color-background: $background;
+$color-foreground: $foreground;
+$color-card: $card;
+$color-dialog: $dialog;
+$color-dialog-foreground: $dialog-foreground;
+$color-primary: $primary;
+$color-secondary: $secondary;
+$color-border: $border;
+$color-outline: $outline;
+$color-shadow: $shadow;
+$color-backdrop: rgba($backdrop, 0.75);
+$color-stroke: $stroke;
+$color-like: $like;
 $font-xs: 14px;
 $font-s: 18px;
 $font-weight-text: 400;
 $font-weight-title: 785;
-$light-color: #fff;
-$dark-color: #000;
-$red-color: #f00;
-$stroke-color: #fff;
 $min-inline-size: 320px;
 $min-block-size: 100dvb;
 $content-width: clamp(375px, 282.14px + 29.018vw, 700px);
@@ -22,11 +52,11 @@ $gradient:
   repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
   repeating-linear-gradient(180deg, #d3d3d3 0 2px, transparent 2px 4px),
   linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
-$border: 2px solid $dark-color;
-$border-block: 2px solid $dark-color;
 $gap-s: 20px;
 $gap-m: 51px;
 $gap-content: 25px;
 $padding-content: 25px 26px;
 $gap-button: 7px;
 $padding-button: 10px 36px;
+
+/* Variables end */

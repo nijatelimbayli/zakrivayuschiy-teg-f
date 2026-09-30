@@ -11,8 +11,8 @@
   font-family: $font-family-accent;
   text-align: center;
   text-transform: uppercase;
-  background-color: $light-color;
-  border: $border;
+  background-color: $color-background;
+  border: 2px solid $color-border;
 
   &__title {
     font-size: clamp(49px, calc(43.366px + 1.502vw), 65px);

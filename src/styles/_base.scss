@@ -14,8 +14,8 @@
 body {
   font-family: $font-family-main;
   font-variation-settings: 'wght' $font-weight-text;
-  color: $dark-color;
-  background-color: $light-color;
+  color: $color-foreground;
+  background-color: $color-background;
   background-image: $gradient;
   background-attachment: fixed;
   background-size: cover;
@@ -26,7 +26,7 @@ body:has(dialog[open]) {
 }
 
 .page {
-  min-inline-size: 320px;
+  min-inline-size: $min-inline-size;
   min-block-size: 100vb;
-  min-block-size: 100dvb;
+  min-block-size: $min-block-size;
 }
