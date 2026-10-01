@@ -44,6 +44,7 @@ $color-like: $like;
 $font-xs: 14px;
 $font-s: 18px;
 $font-weight-text: 400;
+$font-weight-button: 400;
 $font-weight-title: 785;
 $min-inline-size: 320px;
 $min-block-size: 100dvb;
@@ -53,7 +54,7 @@ $gradient:
   repeating-linear-gradient(180deg, #d3d3d3 0 2px, transparent 2px 4px),
   linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
 $gap-s: 20px;
-$gap-m: 51px;
+$gap-m: 50px;
 $gap-content: 25px;
 $padding-content: 25px 26px;
 $gap-button: 7px;
